@@ -1268,6 +1268,15 @@ body.view-control-buttons .viewControlButton {
   font-size: 15px;
   transition: background 0.15s;
 }
+.item-icon img{
+
+    width:40px;
+    height:40px;
+
+    object-fit:contain;
+
+    display:block;
+}
 
 .audio-nav-item:hover .item-icon {
   background: rgba(192, 57, 43, 0.3);
