@@ -364,24 +364,6 @@ function switchScene(scene) {
       '</div>';
     document.body.appendChild(popup);
 
-// ปรับรูปใน Popup อัตโนมัติ
-var popupImg = popup.querySelector('.info-popup-img');
-
-if (popupImg) {
-  popupImg.onload = function () {
-    if (this.naturalHeight > this.naturalWidth) {
-      // รูปแนวตั้ง ให้เห็นเต็ม ไม่โดนตัด
-      this.style.objectFit = 'contain';
-      this.style.objectPosition = 'center';
-      this.style.backgroundColor = '#1e0800';
-    } else {
-      // รูปแนวนอน ให้เต็มกรอบ
-      this.style.objectFit = 'cover';
-      this.style.objectPosition = 'center';
-    }
-  };
-}
-
     var openPopup = function() {
       popup.classList.add('visible');
       document.body.style.overflow = 'hidden';
