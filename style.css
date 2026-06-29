@@ -43,7 +43,7 @@ a, a:hover, a:active, a:visited {
 }
 
 #titleBar {
-  display: none;  /* โ… เน€เธเธดเนเธกเธเธฃเธฃเธ—เธฑเธ”เธเธตเนเธเธฃเธฑเธ (เน€เธเธทเนเธญเธเนเธญเธเนเธ–เธ) */
+  display: none;  /* ★ เพิ่มบรรทัดนี้ครับ (เพื่อซ่อนแถบ) */
   
   position: absolute;
   top: 0;
@@ -260,7 +260,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 120px;              /* เธเธงเธฒเธกเธชเธนเธเธเธญเธเนเธ–เธเธฅเนเธฒเธ */
+  height: 120px;              /* ความสูงของแถบล่าง */
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
@@ -268,7 +268,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   background-color: rgba(58,68,84,0.85);
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* <--- เนเธเนเน€เธเนเธเธเธณเธเธตเนเธเธฃเธฑเธ */
+  justify-content: flex-start; /* <--- แก้เป็นคำนี้ครับ */
 }
 
 #sceneList .scenes {
@@ -399,8 +399,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 }
 
 .no-touch .link-hotspot:hover .link-hotspot-tooltip {
-  opacity: 0; /* เน€เธเธฅเธตเนเธขเธเน€เธเนเธ 0 เน€เธเธทเนเธญเธเนเธญเธ */
-  display: none; /* เธเนเธญเธเธญเธเธเนเธเธฃเธฐเธเธญเธเนเธเน€เธฅเธข */
+  opacity: 0; /* เปลี่ยนเป็น 0 เพื่อซ่อน */
+  display: none; /* ซ่อนองค์ประกอบไปเลย */
 }
 /* Prevent tooltip from triggering */
 .link-hotspot-tooltip {
@@ -842,10 +842,10 @@ body.view-control-buttons .viewControlButton {
 }
 
 #videoPopup iframe {
-  width: 90vw; /* เธเธงเนเธฒเธ 90% เธเธญเธเธซเธเนเธฒเธเธญ */
-  max-width: 560px; /* เนเธ•เนเนเธกเนเน€เธเธดเธ 560px */
+  width: 90vw; /* กว้าง 90% ของหน้าจอ */
+  max-width: 560px; /* แต่ไม่เกิน 560px */
   height: auto;
-  aspect-ratio: 16/9; /* เธฃเธฑเธเธฉเธฒเธชเธฑเธ”เธชเนเธงเธเธงเธดเธ”เธตเนเธญ */
+  aspect-ratio: 16/9; /* รักษาสัดส่วนวิดีโอ */
   border-radius: 6px;
 }
 
@@ -879,7 +879,7 @@ body.view-control-buttons .viewControlButton {
   margin-top: -35px;
   cursor: pointer;
   display: flex;
-  flex-direction: column; /* เน€เธฃเธตเธขเธเนเธเธงเธ•เธฑเนเธ */
+  flex-direction: column; /* เรียงแนวตั้ง */
   align-items: center;
   transition: transform 0.3s ease;
 }
@@ -890,7 +890,7 @@ body.view-control-buttons .viewControlButton {
 }
 
 .audio-hotspot img {
-  width: 70px;            /* เธเธเธฒเธ”เธงเธเธเธฅเธก */
+  width: 70px;            /* ขนาดวงกลม */
   height: 70px;
   background-color: transparent;
   border: none;
@@ -908,11 +908,11 @@ body.view-control-buttons .viewControlButton {
   text-shadow: 0 2px 4px rgba(0,0,0,0.8);
   white-space: nowrap;
   font-family: sans-serif;
-  /* เน€เธญเธฒเธเธทเนเธเธซเธฅเธฑเธเธ”เธณเธญเธญเธเธ•เธฒเธกเธ—เธตเนเธเธธเธ“เธเธญ */
+  /* เอาพื้นหลังดำออกตามที่คุณขอ */
   background: none; 
 }
 
-/* (เน€เธเธทเนเธญเนเธเน) เธชเธตเธชเธณเธซเธฃเธฑเธเธเธธเนเธก Eng เธ–เนเธฒเธญเธขเธฒเธเนเธขเธเธชเธต */
+/* (เผื่อใช้) สีสำหรับปุ่ม Eng ถ้าอยากแยกสี */
 .audioeng-hotspot img {
   /* background-color: #e63946; */
 }
@@ -941,7 +941,7 @@ body.view-control-buttons .viewControlButton {
   background-color: transparent ;
   border: none;
   border-radius: 50%;
-  padding: 12px; /* เธเธฃเธฑเธเธเธเธฒเธ”เนเธญเธเธญเธเธเนเธฒเธเนเธ */
+  padding: 12px; /* ปรับขนาดไอคอนข้างใน */
   margin-bottom: 5px;
   box-shadow: none;
   filter: drop-shadow(0 2px rgba (0,0,0,0.6));
@@ -956,114 +956,114 @@ body.view-control-buttons .viewControlButton {
   font-family: sans-serif;
 }
 
-/* เธเนเธญเธเธเธธเนเธกเธซเธกเธธเธเธเธญเนเธฅเธฐเธเธธเนเธกเน€เธกเธเธน */
+/* ซ่อนปุ่มหมุนจอและปุ่มเมนู */
 #autorotateToggle, #sceneListToggle {
   display: none !important;
 }
 
-/* 1. เนเธ–เธเธเธทเนเธเธซเธฅเธฑเธเธชเธตเธ”เธณเธเธฒเธ”เธ”เนเธฒเธเธฅเนเธฒเธ */
+/* 1. แถบพื้นหลังสีดำคาดด้านล่าง */
 #sceneList {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 120px;              /* เธเธงเธฒเธกเธชเธนเธเธฃเธงเธกเธเธญเธเนเธ–เธเธ”เธณ */
-  background-color: rgba(0, 0, 0, 0.85); /* เธชเธตเธ”เธณเนเธเธฃเนเธเนเธชเธเธเธดเธ”เน (เน€เธซเธกเธทเธญเธเธ•เธฑเธงเธญเธขเนเธฒเธ) */
+  height: 120px;              /* ความสูงรวมของแถบดำ */
+  background-color: rgba(0, 0, 0, 0.85); /* สีดำโปร่งแสงนิดๆ (เหมือนตัวอย่าง) */
   display: flex;
-  align-items: center;        /* เธเธฑเธ”เนเธซเนเธญเธขเธนเนเธเธถเนเธเธเธฅเธฒเธเนเธเธงเธ•เธฑเนเธ */
-  overflow-x: auto;           /* เธ–เนเธฒเธเธญเน€เธฅเนเธ เนเธซเนเน€เธฅเธทเนเธญเธเธเนเธฒเธขเธเธงเธฒเนเธ”เน */
+  align-items: center;        /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+  overflow-x: auto;           /* ถ้าจอเล็ก ให้เลื่อนซ้ายขวาได้ */
   overflow-y: hidden;
   z-index: 1000;
-  padding: 0 10px;            /* เน€เธงเนเธเธเธญเธเธเนเธฒเธขเธเธงเธฒเธเธดเธ”เธซเธเนเธญเธข */
+  padding: 0 10px;            /* เว้นขอบซ้ายขวานิดหน่อย */
 }
 
-/* 2. เธเธฅเนเธญเธเธฃเธงเธกเธฃเธนเธเธ เธฒเธ */
+/* 2. กล่องรวมรูปภาพ */
 #sceneList .scenes {
   display: flex;
-  justify-content: center;    /* เธเธฑเธ”เนเธซเนเธญเธขเธนเนเธ•เธฃเธเธเธฅเธฒเธเธเธญ (เธ–เนเธฒเธกเธตเธฃเธนเธเธเนเธญเธข) */
-  /* justify-content: flex-start;  <-- เธ–เนเธฒเธกเธตเธฃเธนเธเน€เธขเธญเธฐเธเธเธฅเนเธเธเธญ เนเธซเนเน€เธเธดเธ”เธ•เธฑเธงเธเธตเนเนเธ—เธเธเธฃเธฑเธ */
+  justify-content: center;    /* จัดให้อยู่ตรงกลางจอ (ถ้ามีรูปน้อย) */
+  /* justify-content: flex-start;  <-- ถ้ามีรูปเยอะจนล้นจอ ให้เปิดตัวนี้แทนครับ */
   align-items: center;
   height: 100%;
   width: 100%;
-  gap: 10px;                  /* เธฃเธฐเธขเธฐเธซเนเธฒเธเธฃเธฐเธซเธงเนเธฒเธเธฃเธนเธ */
+  gap: 10px;                  /* ระยะห่างระหว่างรูป */
 }
 
-/* 3. เธ•เธฑเธงเธฃเธนเธเธ เธฒเธเนเธ•เนเธฅเธฐเธเนเธญเธ (Card) */
+/* 3. ตัวรูปภาพแต่ละก้อน (Card) */
 #sceneList .scene {
   display: block;
-  position: relative;         /* เน€เธเธทเนเธญเนเธซเนเธงเธฒเธเธเธทเนเธญเธเนเธญเธเธ—เธฑเธเนเธ”เน */
-  width: 140px;               /* เธเธงเธฒเธกเธเธงเนเธฒเธเธฃเธนเธ (เธเธฃเธฑเธเนเธ”เน) */
-  height: 90px;               /* เธเธงเธฒเธกเธชเธนเธเธฃเธนเธ (เธเธฃเธฑเธเนเธ”เน) */
-  border-radius: 4px;         /* เธกเธธเธกเธกเธเธเธดเธ”เน */
+  position: relative;         /* เพื่อให้วางชื่อซ้อนทับได้ */
+  width: 140px;               /* ความกว้างรูป (ปรับได้) */
+  height: 90px;               /* ความสูงรูป (ปรับได้) */
+  border-radius: 4px;         /* มุมมนนิดๆ */
   overflow: hidden;
-  flex-shrink: 0;             /* เธซเนเธฒเธกเธขเนเธญเธฃเธนเธ เนเธซเนเธเธเธเธเธฒเธ”เนเธงเนเน€เธชเธกเธญ */
-  border: 2px solid transparent; /* เน€เธ•เธฃเธตเธขเธกเธเธญเธเนเธงเนเธชเธณเธซเธฃเธฑเธเธ•เธญเธเน€เธกเธฒเธชเนเธเธตเน */
+  flex-shrink: 0;             /* ห้ามย่อรูป ให้คงขนาดไว้เสมอ */
+  border: 2px solid transparent; /* เตรียมขอบไว้สำหรับตอนเมาส์ชี้ */
   transition: all 0.2s ease;
   cursor: pointer;
-  opacity: 0.8;               /* เธเธเธ•เธดเนเธซเนเธเธฒเธเธเธดเธ”เธเธถเธ */
+  opacity: 0.8;               /* ปกติให้จางนิดนึง */
 }
 
-/* 4. เธฃเธนเธเธ เธฒเธเธเนเธฒเธเนเธ */
+/* 4. รูปภาพข้างใน */
 #sceneList .scene img {
   width: 100%;
   height: 100%;
-  object-fit: cover;          /* เธเธฑเธเธเธฑเธเนเธซเนเธฃเธนเธเน€เธ•เนเธกเธเธฃเธญเธเนเธ”เธขเธชเธฑเธ”เธชเนเธงเธเนเธกเนเน€เธเธตเนเธขเธ */
+  object-fit: cover;          /* บังคับให้รูปเต็มกรอบโดยสัดส่วนไม่เพี้ยน */
 }
 
-/* 5. เนเธ–เธเธเธทเนเธญเธ”เนเธฒเธเธฅเนเธฒเธ (Text Overlay) */
+/* 5. แถบชื่อด้านล่าง (Text Overlay) */
 #sceneList .scene .text {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   padding: 4px 0;
-  background-color: rgba(0, 0, 0, 0.6); /* เธเธทเนเธเธซเธฅเธฑเธเธ”เธณเธเธฒเธเน เธ•เธฃเธเธ•เธฑเธงเธซเธเธฑเธเธชเธทเธญ */
+  background-color: rgba(0, 0, 0, 0.6); /* พื้นหลังดำจางๆ ตรงตัวหนังสือ */
   color: #fff;
-  font-size: 12px;            /* เธเธเธฒเธ”เธ•เธฑเธงเธซเธเธฑเธเธชเธทเธญ */
+  font-size: 12px;            /* ขนาดตัวหนังสือ */
   font-family: sans-serif;
   text-align: center;
-  white-space: nowrap;        /* เธซเนเธฒเธกเธ•เธฑเธ”เธเธฃเธฃเธ—เธฑเธ” */
+  white-space: nowrap;        /* ห้ามตัดบรรทัด */
   overflow: hidden;
-  text-overflow: ellipsis;    /* เธ–เนเธฒเธเธทเนเธญเธขเธฒเธงเน€เธเธดเธเนเธซเนเน€เธเนเธ ... */
+  text-overflow: ellipsis;    /* ถ้าชื่อยาวเกินให้เป็น ... */
 }
 
-/* 6. เน€เธญเธเน€เธเธเธ•เนเธ•เธญเธเน€เธญเธฒเน€เธกเธฒเธชเนเธเธตเน เธซเธฃเธทเธญเธฃเธนเธเธ—เธตเนเน€เธฅเธทเธญเธเธญเธขเธนเน */
+/* 6. เอฟเฟกต์ตอนเอาเมาส์ชี้ หรือรูปที่เลือกอยู่ */
 #sceneList .scene:hover,
 #sceneList .scene.current {
-  opacity: 1;                 /* เธเธฑเธ”เธเธถเนเธ */
-  border: 2px solid #fff;     /* เธกเธตเธเธญเธเธชเธตเธเธฒเธง */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* เน€เธฃเธทเธญเธเนเธชเธเธเธดเธ”เน */
+  opacity: 1;                 /* ชัดขึ้น */
+  border: 2px solid #fff;     /* มีขอบสีขาว */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* เรืองแสงนิดๆ */
 }
 
 #fixed-web-icon {
-  position: fixed;      /* เธฅเนเธญเธเธ•เธณเนเธซเธเนเธเธเธฑเธเธซเธเนเธฒเธเธญ */
-  right: 20px;          /* เธซเนเธฒเธเธเธญเธเธเธงเธฒ */
-  bottom: 135px;        /* เธฅเธญเธขเน€เธซเธเธทเธญ Scene List (120px + 15px) */
+  position: fixed;      /* ล็อกตำแหน่งกับหน้าจอ */
+  right: 20px;          /* ห่างขอบขวา */
+  bottom: 135px;        /* ลอยเหนือ Scene List (120px + 15px) */
   width: 55px;
   height: 55px;
-  z-index: 999999;      /* เนเธชเนเน€เธฅเธเน€เธขเธญเธฐเน เนเธซเนเธกเธฑเนเธเนเธเธงเนเธฒเธญเธขเธนเนเธซเธเนเธฒเธชเธธเธ” */
+  z-index: 999999;      /* ใส่เลขเยอะๆ ให้มั่นใจว่าอยู่หน้าสุด */
   cursor: pointer;
   transition: transform 0.2s ease;
-  display: block !important; /* เธเธฑเธเธเธฑเธเนเธซเนเนเธชเธ”เธเธเธฅ */
+  display: block !important; /* บังคับให้แสดงผล */
 }
 
 #fixed-web-icon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); /* เน€เธเธดเนเธกเน€เธเธฒเนเธซเนเธ”เธนเธกเธตเธกเธดเธ•เธด */
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); /* เพิ่มเงาให้ดูมีมิติ */
 }
 
 #fixed-web-icon:hover {
-  transform: scale(1.1); /* เธเธขเธฒเธขเน€เธกเธทเนเธญเน€เธญเธฒเน€เธกเธฒเธชเนเธเธตเน */
+  transform: scale(1.1); /* ขยายเมื่อเอาเมาส์ชี้ */
 }
 
-/* เธเธฃเธฑเธเธ•เธณเนเธซเธเนเธเธชเธณเธซเธฃเธฑเธเธกเธทเธญเธ–เธทเธญ */
+/* ปรับตำแหน่งสำหรับมือถือ */
 @media (max-width: 600px) {
   #fixed-web-icon {
     width: 45px;
     height: 45px;
-    bottom: 110px; /* เธฅเธ”เธฅเธเธกเธฒเธซเธเนเธญเธขเนเธซเนเน€เธซเธกเธฒเธฐเธเธฑเธเธเธญเน€เธฅเนเธ */
+    bottom: 110px; /* ลดลงมาหน่อยให้เหมาะกับจอเล็ก */
     right: 15px;
   }
 }
@@ -1072,7 +1072,7 @@ body.view-control-buttons .viewControlButton {
 /* ---- Audio Nav Panel ---- */
 #audioNav {
   position: fixed;
-  top: 0;        /* เธเธงเธฒเธเธ */
+  top: 0;        /* ขวาบน */
   right: 0;
   z-index: 2000;
   display: flex;
@@ -1080,7 +1080,7 @@ body.view-control-buttons .viewControlButton {
   align-items: flex-end;
 }
 
-/* เธเธธเนเธกเน€เธเธดเธ”/เธเธดเธ” */
+/* ปุ่มเปิด/ปิด */
 #audioNavToggle {
   display: flex;
   align-items: center;
@@ -1120,7 +1120,7 @@ body.view-control-buttons .viewControlButton {
   transform: rotate(0deg);
 }
 
-/* เธฃเธฒเธขเธเธฒเธฃ Panel */
+/* รายการ Panel */
 #audioNavList {
   display: none;
   width: 260px;
@@ -1142,7 +1142,7 @@ body.view-control-buttons .viewControlButton {
   to   { opacity: 1; transform: translateX(0); }
 }
 
-/* Header เธเธญเธ panel */
+/* Header ของ panel */
 .audio-nav-header {
   padding: 12px 16px;
   font-family: 'Kanit', sans-serif;
@@ -1153,7 +1153,7 @@ body.view-control-buttons .viewControlButton {
   text-transform: uppercase;
 }
 
-/* container เธฃเธฒเธขเธเธฒเธฃ */
+/* container รายการ */
 .audio-nav-items {
   max-height: 340px;
   overflow-y: auto;
@@ -1168,7 +1168,7 @@ body.view-control-buttons .viewControlButton {
   border-radius: 2px;
 }
 
-/* เนเธ•เนเธฅเธฐเธฃเธฒเธขเธเธฒเธฃ */
+/* แต่ละรายการ */
 .audio-nav-item {
   display: flex;
   align-items: center;
@@ -1184,7 +1184,7 @@ body.view-control-buttons .viewControlButton {
   border-left-color: #e63946;
 }
 
-/* item เธ—เธตเนเธกเธต 2 เธ เธฒเธฉเธฒ */
+/* item ที่มี 2 ภาษา */
 .audio-nav-item.bilingual {
   border-left-color: rgba(255, 200, 0, 0.5);
 }
@@ -1194,7 +1194,7 @@ body.view-control-buttons .viewControlButton {
   border-left-color: #ffd700;
 }
 
-/* เนเธญเธเธญเธเธงเธเธเธฅเธก */
+/* ไอคอนวงกลม */
 .item-icon {
   width: 36px;
   height: 36px;
@@ -1211,7 +1211,7 @@ body.view-control-buttons .viewControlButton {
   background: rgba(255, 215, 0, 0.15);
 }
 
-/* เธเนเธญเธเธงเธฒเธก */
+/* ข้อความ */
 .item-info {
   flex: 1;
   min-width: 0;
@@ -1234,7 +1234,7 @@ body.view-control-buttons .viewControlButton {
   margin-top: 2px;
 }
 
-/* เธฅเธนเธเธจเธฃเธเธงเธฒ */
+/* ลูกศรขวา */
 .item-arrow {
   font-size: 16px;
   color: rgba(255,255,255,0.3);
@@ -1285,9 +1285,9 @@ body.view-control-buttons .viewControlButton {
   }
 }
 
-/* โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•
-   INFO HOTSPOT โ€” เธเธธเนเธก i (เธเธตเธกเนเธ”เธ-เธ—เธญเธ)
-โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ• */
+/* ══════════════════════════════════════════
+   INFO HOTSPOT — ปุ่ม i (ธีมแดง-ทอง)
+══════════════════════════════════════════ */
 .info-hotspot {
   display: flex;
   flex-direction: column;
@@ -1297,7 +1297,7 @@ body.view-control-buttons .viewControlButton {
   margin-top: -40px;
 }
 
-/* เธงเธเธเธฅเธกเธเธธเนเธก */
+/* วงกลมปุ่ม */
 .info-hotspot-btn {
   width: 72px;
   height: 72px;
@@ -1322,7 +1322,7 @@ body.view-control-buttons .viewControlButton {
     0 6px 20px rgba(0,0,0,0.6);
 }
 
-/* เธฃเธนเธเธญเธเธเนเธเธฃเธฐเนเธเธเธธเนเธก */
+/* รูปองค์พระในปุ่ม */
 .info-hotspot-deity-img {
   width: 100%;
   height: 100%;
@@ -1330,7 +1330,7 @@ body.view-control-buttons .viewControlButton {
   border-radius: 50%;
 }
 
-/* เธ•เธฑเธง i (เธเธฃเธ“เธตเนเธกเนเธกเธตเธฃเธนเธ) */
+/* ตัว i (กรณีไม่มีรูป) */
 .info-hotspot-i-label {
   color: #F0C840;
   font-size: 32px;
@@ -1341,7 +1341,7 @@ body.view-control-buttons .viewControlButton {
   text-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
 
-/* เธเนเธฒเธขเธเธทเนเธญเนเธ•เนเธเธธเนเธก */
+/* ป้ายชื่อใต้ปุ่ม */
 .info-hotspot-label {
   margin-top: 7px;
   color: #fff;
@@ -1376,9 +1376,9 @@ body.view-control-buttons .viewControlButton {
   100% { opacity: 0;    transform: scale(1.65); }
 }
 
-/* โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•
+/* ══════════════════════════════════════════
    INFO POPUP OVERLAY
-โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ• */
+══════════════════════════════════════════ */
 .info-popup-overlay {
   position: fixed;
   inset: 0;
@@ -1397,7 +1397,7 @@ body.view-control-buttons .viewControlButton {
   visibility: visible;
 }
 
-/* เธเธฅเนเธญเธ popup */
+/* กล่อง popup */
 .info-popup-box {
   position: relative;
   background: linear-gradient(160deg, #1e0800 0%, #2d1000 60%, #1a0600 100%);
@@ -1417,7 +1417,7 @@ body.view-control-buttons .viewControlButton {
   to   { transform: scale(1) translateY(0);       opacity: 1; }
 }
 
-/* เนเธ–เธเธ—เธญเธเธเธเธชเธธเธ” */
+/* แถบทองบนสุด */
 .info-popup-box::before {
   content: '';
   display: block;
@@ -1426,7 +1426,7 @@ body.view-control-buttons .viewControlButton {
   border-radius: 14px 14px 0 0;
 }
 
-/* เธเธธเนเธกเธเธดเธ” */
+/* ปุ่มปิด */
 .info-popup-close {
   position: absolute;
   top: 12px;
@@ -1447,7 +1447,7 @@ body.view-control-buttons .viewControlButton {
 }
 .info-popup-close:hover { background: #C0392B; }
 
-/* เธฃเธนเธเธญเธเธเนเธเธฃเธฐเนเธ popup */
+/* รูปองค์พระใน popup */
 .info-popup-img-wrap {
   width: 100%;
   height: 220px;
@@ -1465,11 +1465,11 @@ body.view-control-buttons .viewControlButton {
 .info-popup-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* เธเนเธฒเน€เธฃเธดเนเธกเธ•เนเธ */
+  object-fit: cover;   /* ค่าเริ่มต้น */
   object-position: center;
 }
 
-/* เน€เธเธทเนเธญเธซเธฒ */
+/* เนื้อหา */
 .info-popup-body {
   padding: 20px 24px 24px;
 }
